@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+
+/**
+ * 这个意思是 滑动条的方向
+ */
 typedef NS_ENUM(NSInteger, ScrollViewDiretion) {
     UIScrollViewScrolltoUp,
     UIScrollViewScrolltoDown,

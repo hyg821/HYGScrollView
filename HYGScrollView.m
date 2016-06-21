@@ -31,9 +31,9 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context{
     CGFloat thisOffset=self.contentOffset.y;
-    if (thisOffset>self.lastOffset) {
+    if (thisOffset-self.lastOffset>0.5) {
         self.diretion=UIScrollViewScrolltoDown;
-    }else if (thisOffset<self.lastOffset){
+    }else if (thisOffset-self.lastOffset<0.5){
         self.diretion=UIScrollViewScrolltoUp;
     }
     self.lastOffset=thisOffset;
